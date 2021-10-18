@@ -21,7 +21,6 @@ for i, a in enumerate(boxes.splitlines()):
             cv2.rectangle(img, (x, y), (w + x, h + y), (0, 0, 255), 2)              #rectangle around words
             cv2.putText(img, a[11], (x, y - 5), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 0, 0), 2)            #corresponding texts
 
-
 cv2.imshow('OCR', img)
 cv2.waitKey(0)
 if cv2.waitKey(1) & 0xFF == ord('q'):
